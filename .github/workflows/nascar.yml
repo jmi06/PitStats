@@ -24,4 +24,4 @@ jobs:
           git config --local user.name "nascar_action"
           git add .
           git commit -m "Updated NASCAR Data"
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/jmi06/pitstats.git main
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/jmi06/PitStats.git main
