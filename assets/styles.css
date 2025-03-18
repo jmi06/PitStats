@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+html{
+    background-color: #232931;
+
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #393E46;
+    padding: 15px 20px;
+    margin:auto;
+    max-width: 85%;
+    border-radius: 15px;
+    border-width: 5px;
+
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #aaa;
+}
+
+
+#series{
+    
+    margin:auto;
+    margin-top: 1%;
+    display: flex;
+    
+    overflow-x: scroll;
+    max-width: 90%;
+    border-bottom: 2px solid #393E46;
+
+}
+
+#series a{
+    color: white;
+    font-size: 0.7em;
+    cursor: pointer;
+
+    
+
+}
+
+
+#series h2{
+    padding-right: 10%;
+    padding-left: 10%
+    
+
+}
+
+#year{
+    
+    margin:auto;
+    margin-top: 1%;
+    display: flex;
+
+    overflow-x: scroll;
+    max-width: 90%;
+    border-bottom: 2px solid #393E46;
+    padding: 5px;
+    
+}
+
+#year a{
+    color: white;
+    font-size: 0.7em;
+    cursor: pointer;
+    
+
+}
+
+
+#year h2{
+    padding-right: 10%;
+    padding-left: 10%;
+    margin:0.5%;
+    
+
+}
+
+
+#races {
+    margin: auto;
+      margin-top: auto;
+    margin-top: 1%;
+    display: flex;
+    max-width: 75%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    max-width: 90%;
+
+  }
+
+#races a{
+    color: white;
+    font-size: 0.7em;
+    cursor: pointer;
+
+    
+
+}
+
+
+#races h2{
+    padding-right: 10%;
+    padding-left: 10%;
+    
+    margin:0.5%;
+    
+
+}
+
+
+#data-table {
+    background-color: #232931;
+    border: #393E46 2px solid;
+    border-radius: 6px;
+    margin:auto;
+    width: 70%;
+
+
+
+
+}
+
+
+#data-table th {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #303741;
+    color: white;
+
+}
+
+#data-table tr:nth-child(even){background-color: #2C333D;}
+#data-table tr:nth-child(odd){background-color: #37404A;}
+
+#data-table th, tr, td, table, tbody{
+    border-collapse: collapse;
+    padding:5px;
+    color:white;
+    padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#data-table tr:hover{
+    background-color: #1C1F24;
+
+}
+
+
+
+#data-table thead  th{
+    cursor: pointer;
+
+
+}
+
+
+.red{
+    color: #FF6B6B;
+}
+
+.green{
+    color: #4ECCA3;
+}
+
+#race-title{
+    color: white;
+    text-align: center;
+}

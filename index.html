@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>PitRanks</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+
+    <div id="container">
+
+        <div id="sub-container" style="border: #393E46 solid 2px; border-radius: 6px; max-width: 75%; margin:auto; margin-top: 1%">
+            <div id="series">
+                <h2><a onclick="setSeries('NascarCup'); return false;">Cup</a></h2>
+                <h2><a onclick="setSeries('NascarXfinity'); return false;">Xfinity</a></h2>
+                <h2><a>Truck</a></h2>
+                <h2><a>Formula1</a></h2>
+                <h2><a>IndyCar</a></h2>
+                
+                
+    
+    
+    
+    
+    
+            </div>
+            <div id="year">
+    
+            </div>
+            <div id="races">
+    
+            </div>
+
+
+
+        </div>
+
+
+        <div id="rank-table">
+            <div style="display: flex; justify-content: center;">
+                <h3 style="color: white;">Full-Time Only</h3>
+                <input id="full-time" onclick="set_fullTime()" type="checkbox" name="Full-Time" id="">
+    
+            </div>
+
+
+
+            <h2 id="race-title"></h2>
+            <table id="data-table">
+                <thead>
+                    <tr id="table-head"></tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+
+
+        </div>
+
+
+    </div>
+    
+    
+
+
+
+
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("components/header.html");
+        });
+    </script>
+    <script src="scripts/nascar.js"></script>
+
+</body>
+</html>
