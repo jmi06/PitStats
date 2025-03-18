@@ -9,6 +9,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
+      - name: Install dependancies
+        run: |
+          pip install requests 
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -18,3 +22,11 @@ jobs:
 
       - name: Run Script
         run: python gatherScripts/nascar/nascar.py 
+
+      - name: Commit to repo
+        run: |
+        git config --local user.email "nascar_action@example.com"
+        git config --loca user.name "nascar_action"
+        git add .
+        git commit -m "Updated Nascar Data" 
+        git push
