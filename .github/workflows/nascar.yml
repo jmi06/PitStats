@@ -1,8 +1,6 @@
 name: Update NASCAR Data and Elo Ratings
 
-on:
-  schedule:
-  - cron: '10 10 * * 1'
+on: [push]
 
 jobs:
   update_data:
