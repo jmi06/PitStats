@@ -27,7 +27,7 @@ jobs:
         run: |
           git config --local user.email "nascar_action@example.com"
           git config --local user.name "nascar_action"
-          git add .
+          git add data/**/*.json
           git commit -m "Updated NASCAR Data" || echo "No changes to commit"
 
       - name: Push changes
