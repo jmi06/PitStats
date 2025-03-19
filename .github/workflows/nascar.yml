@@ -33,4 +33,4 @@ jobs:
       - name: Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/jmi06/PitStats.git HEAD:main
+        run: git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/jmi06/PitStats.git HEAD:master
