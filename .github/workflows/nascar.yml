@@ -3,6 +3,8 @@ on: [push]
 jobs:
   update_data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -26,4 +28,5 @@ jobs:
           git config --local user.name "nascar_action"
           git add .
           git commit -m "Updated NASCAR Data"
-          git push https://github.com/jmi06/PitStats.git master
+          git push
+          env:${{secrets.GITHUB_TOKEN}}
