@@ -128,11 +128,10 @@ let races_data
 let race_names = []
 
 function get_races(series, year) {
-    console.log(series, year)
+    // console.log(series, year)
 
-    console.log(`/data/${series}/${year}/races.json`)
-
-    fetch(`/data/${series}/${year}/races.json`)
+    // console.log(`/data/${series}/${year}/races.json`)
+    fetch(`https://raw.githubusercontent.com/jmi06/PitStats/refs/heads/master/data/${series}/${year}/races.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -213,14 +212,14 @@ function get_rankings(series, year, chosen_race) {
 
 
     async function fetch_race_data(series, year, race) {
-        const response = await fetch(`data/${series}/${year}/races.json`);
+        const response = await fetch(`https://raw.githubusercontent.com/jmi06/PitStats/refs/heads/master/data/${series}/${year}/races.json`);
         if (!response.ok) {
             return Promise.reject('Network response was not ok');
         }
         let race_data = await response.json();
         race_data = race_data[race];
     
-        const response_drivers = await fetch(`data/${series}/${year}/drivers.json`);
+        const response_drivers = await fetch(`https://raw.githubusercontent.com/jmi06/PitStats/refs/heads/master/data/${series}/${year}/drivers.json`);
         if (!response_drivers.ok) {
             return Promise.reject('Network response was not ok');
         }
@@ -249,7 +248,7 @@ function get_rankings(series, year, chosen_race) {
 
 
     async function fetch_driver_data(series, year){
-        const response = await fetch(`data/${series}/${year}/drivers.json`);
+        const response = await fetch(`https://raw.githubusercontent.com/jmi06/PitStats/refs/heads/master/data/${series}/${year}/drivers.json`);
         if (!response.ok) {
             return Promise.reject('Network response was not ok');
         }
