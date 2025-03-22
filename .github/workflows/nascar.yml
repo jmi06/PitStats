@@ -1,0 +1,27 @@
+on: [push]
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Script
+        run: python gatherScripts/nascar/nascar.py 
+
+      - name: Commit to repo
+        run: |
+          git config --local user.email "nascar_action@example.com"
+          git config --local user.name "nascar_action"
+          git add .
+          git commit -m "Updated NASCAR Data"
+          git push
