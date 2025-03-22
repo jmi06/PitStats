@@ -14,8 +14,6 @@ def gatherAllTimeData():
         all_time_drivers = {}
 
 
-
-
         for year in years_files:
             with open(f'data/{series}/{year}/races.json') as raceFile:
                 races = json.load(raceFile)
