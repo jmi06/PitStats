@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+h1, h2, h3, h4, div, td, th, tr{
+    font-family: "Roboto", sans-serif;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,6 +15,15 @@ html{
     background-color: #232931;
 
 }
+
+h3{
+    font-weight: 400
+}
+
+h2{
+    font-weight: 500;
+}
+
 
 #navbar {
     display: flex;
@@ -22,7 +39,7 @@ html{
 }
 
 .logo {
-    color: white;
+    color: #4ECCA3;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -39,6 +56,14 @@ html{
 }
 
 
+#githubLink a{
+    color:#4ECCA3;
+}
+
+a:visited{
+    color:#4ECCA3;
+}
+
 #series{
     
     margin:auto;
@@ -48,6 +73,7 @@ html{
     overflow-x: scroll;
     max-width: 90%;
     border-bottom: 2px solid #393E46;
+    justify-content: center;
 
 }
 
@@ -192,4 +218,8 @@ html{
 #race-title{
     color: white;
     text-align: center;
+}
+
+math{
+    margin:auto;
 }

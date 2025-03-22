@@ -72,7 +72,10 @@ function setSeries(the_series) {
         availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017']
         chosen_year = availableYears[0]
     }
-
+    if (the_series == "NascarTruck") {
+        availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017']
+        chosen_year = availableYears[0]
+    }
 
     update_url(the_series, chosen_year)
     updateYears(availableYears, the_series)

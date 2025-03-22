@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>PitRanks</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+
+    <div id="container">
+
+        <div id="sub-container" style="border: #393E46 solid 2px; border-radius: 6px; max-width: 75%; margin:auto; margin-top: 1%">
+                <h2 style="text-align:center; color: white; margin: 2%;">About</h2>
+                <h3 style="color: white; margin: 2%;">PitRanks is an open source motorsports stats platform that calculates Driver Elo Ratings in multiple racing series. Currently, PitRanks only supports NASCAR series, but expansion to FIA series and Indycar is planned. </h3>
+                <h3 style="color: white; margin: 2%;">The Source Code is available on <a id="githubLink"  href="https://github.com/jmi06/PitStats">Github</a> </h3>
+
+                <!-- <h2 style="text-align:center; color: white; margin: 2%; margin-top:4%;">The Formula</h2> -->
+                <h3 style="color: white; margin: 2%; margin-bottom:4%;">The PitStats Elo formula is as follows:</h3>
+                <div style="margin:  1%; padding:1%; ">
+                <div style="text-align: center;">
+
+                    <math style="text-align:center; color: white; margin: 2%; font-size: 1.5em">
+                        <mi>New Rating</mi>
+                    <mo>=</mo>
+                    <mi>Old Rating</mi>
+                    <mo>+</mo>
+                    <mi>k</mi>
+                    <mo>&#x22C5;</mo> <!-- Multiplication dot -->
+                    <mo>(</mo>
+                    <mi>Score</mi>
+                    <mo>-</mo>
+                    <mi>Expected Score</mi>
+                    <mo>)</mo>
+                </math>
+
+                </div>
+                <div style="text-align: center; margin-top: 3%">
+                    
+                    <math style="text-align:center; color: white; margin: 2%; font-size: 1.5em">
+                    <mi>score</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mrow>
+                          <mi>total drivers</mi>
+                        <mo>-</mo>
+                        <mi>finishing position</mi>
+                      </mrow>
+                      <mrow>
+                        <mi>total drivers</mi>
+                        <mo>-</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfrac>
+            </math>
+        </div>
+        <div style="text-align: center; margin-top: 3%">
+                    
+            <math style="text-align:center; color: white; margin: 2%; font-size: 1.5em">
+                <mi>expected_score</mi>
+                <mo>=</mo>
+                <mfrac>
+                  <mn>1</mn>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>+</mo>
+                    <msup>
+                      <mn>10</mn>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <mi>Average Field Elo</mi>
+                            <mo>-</mo>
+                            <mi>Driver Elo</mi>
+                          </mrow>
+                          <mn>400</mn>
+                        </mfrac>
+                      </mrow>
+                    </msup>
+                  </mrow>
+                </mfrac>
+              </math>
+        </div>
+        <div style="text-align: center; margin-top: 3%;">
+            <math style="text-align:center; color: white; margin: 2%; font-size: 1.5em">
+                <mi>k</mi>
+                <mo>=</mo>
+                <mn>16</mn>
+              </math>
+            </div>
+    
+
+        </div>
+
+    
+    
+    
+    
+    
+
+
+
+        </div>
+
+
+       
+
+
+    </div>
+    
+    
+
+
+
+
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("components/header.html");
+        });
+    </script>
+    <script src="scripts/nascar.js"></script>
+
+</body>
+</html>
